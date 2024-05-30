@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #E1F5FE;
+    color: #0277BD;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.navbar {
+    background-color: #01579b;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #0277BD;
+}
+
+.contenedor-mensajes {
+    display: flex;
+    flex: 1;
+}
+
+.lista-usuarios {
+    width: 25%;
+    background-color: #FFFFFF;
+    border-right: 1px solid #B0BEC5;
+    overflow-y: auto;
+}
+
+.lista-usuarios .usuario {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.lista-usuarios .usuario:hover {
+    background-color: #B3E5FC;
+}
+
+.chat {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mensajes {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #B0BEC5;
+}
+
+.mensaje {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 60%;
+    word-wrap: break-word;
+}
+
+.mensaje.propia {
+    background-color: #E1F5FE;
+    align-self: flex-end;
+}
+
+.mensaje.ajena {
+    background-color: #B3E5FC;
+    align-self: flex-start;
+}
+
+form {
+    display: flex;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-top: 1px solid #B0BEC5;
+}
+
+form textarea {
+    flex: 1;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #B0BEC5;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+form button {
+    background-color: #01579b;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0277BD;
+}

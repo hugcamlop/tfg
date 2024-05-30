@@ -1,0 +1,203 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #0277BD; /* Azul oscuro para el texto */
+    line-height: 1.6;
+    padding: 20px;
+    padding-top: 80px; /* Espacio para la barra de navegación */
+    background-color: #E1F5FE; /* Azul claro suave */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #01579b; /* Azul oscuro */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #FFFFFF; /* Blanco para los enlaces */
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #0277BD; /* Azul más claro al pasar el mouse */
+}
+
+/* Contenedor de la línea de tiempo */
+.timeline {
+    margin: auto;
+    max-width: 800px; /* Ancho máximo para la legibilidad */
+}
+
+/* Estilos de las publicaciones */
+.publicacion {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    color: #0277BD; /* Azul oscuro para el contenido */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Fuente moderna */
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #0277BD; /* Borde azul oscuro */
+    border-radius: 8px;
+}
+
+.publicacion p, .publicacion span {
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para "Publicado por:" y botones de seguir */
+.publicacion strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.siguiendo {
+    margin-left: 10px;
+    color: green; /* Color verde para el texto "Siguiendo" */
+}
+
+.responder {
+    margin-top: 10px;
+}
+
+.respuesta {
+    margin-left: 20px;
+    padding: 10px;
+    border-left: 2px solid #0277BD;
+    margin-top: 10px;
+}
+
+/* Estilos de la sección para publicar */
+.publicar-tweet h3, .publicar-tweet label {
+    color: #0277BD; /* Azul oscuro */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-shadow: none; /* Sin sombra */
+}
+
+.publicar-tweet h3 {
+    margin-bottom: 15px;
+}
+
+.publicar-tweet form {
+    display: flex;
+    flex-direction: column;
+}
+
+.publicar-tweet label {
+    margin-bottom: 5px;
+}
+
+.publicar-tweet textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid #0277BD;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #0277BD; /* Texto azul oscuro */
+}
+
+.publicar-tweet button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #01579b; /* Azul oscuro */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #01579b;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.publicar-tweet button:hover {
+    background-color: #0277BD; /* Azul más claro al pasar el mouse */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 119, 189, 0.5); /* Sombra azul */
+}
+
+/* Estilos para el panel de emojis */
+#panelEmojis {
+    display: none;
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1001; /* Asegurarse de que está por encima de otros elementos */
+}
+
+#panelEmojis button {
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón "Responder" en las respuestas */
+.respuesta button {
+    margin-top: 5px;
+    background-color: #01579b; /* Azul oscuro */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #01579b;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.respuesta button:hover {
+    background-color: #0277BD; /* Azul más claro al pasar el mouse */
+}
+
+/* Estilos para el formulario de respuesta anidada */
+.form-respuesta {
+    margin-top: 10px;
+}
+
+.form-respuesta textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #0277BD;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #0277BD; /* Texto azul oscuro */
+}
+
+.form-respuesta button {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #01579b; /* Azul oscuro */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #01579b;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.form-respuesta button:hover {
+    background-color: #0277BD; /* Azul más claro al pasar el mouse */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 119, 189, 0.5); /* Sombra azul */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+}

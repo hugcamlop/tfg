@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer - Red Social de Videojuegos</title>
+    <style>
+        /* Resetear márgenes y rellenos */
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para el cuerpo de la página */
+        body {
+            /* Fondo amarillo */
+            background-color: #FFD700;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos para el contenedor principal */
+        .container {
+            position: relative; /* Establecer posición relativa */
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra */
+            color: #FFFFFF; /* Texto blanco */
+        }
+
+        /* Estilos para el contenedor de la imagen de fondo */
+        .background-image-container {
+            background-image: url('gamm.PNG'); /* Ruta de la imagen principal */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top; /* Centra la imagen verticalmente y la alinea en la parte superior */
+            position: absolute; /* Establecer posición absoluta */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1; /* Asegurar que esté detrás del contenido */
+        }
+
+        /* Estilos para los títulos */
+        h1, h2, h3 {
+            color: #FFD700; /* Amarillo */
+            font-weight: normal; /* No negrita */
+            text-align: center;
+        }
+
+        /* Estilos para los párrafos */
+        p {
+            color: #00FF00; /* Color de texto verde fosforito */
+            margin-bottom: 20px; /* Espaciado inferior */
+            line-height: 1.5; /* Altura de línea */
+            font-weight: bold; /* Texto en negrita */
+        }
+
+        /* Estilos para los enlaces */
+        a {
+            color: #FFD700; /* Color amarillo */
+            text-decoration: none; /* Quitar subrayado */
+            transition: color 0.3s; /* Transición suave del color */
+            font-weight: bold; /* Texto en negrita */
+        }
+
+        a:hover {
+            color: #FFFF00; /* Cambio de color al pasar el ratón */
+        }
+
+        /* Estilos para el formulario de inicio de sesión */
+        .inicio-sesion {
+            margin-bottom: 20px; /* Espaciado inferior */
+            color: #FFFFFF; /* Color de texto blanco */
+            text-align: center;
+        }
+
+        /* Estilos para los campos de entrada */
+        input[type="text"], input[type="password"] {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            color: #FFFFFF; /* Color de texto blanco */
+            border: 1px solid #FFD700; /* Borde amarillo */
+            padding: 10px;
+            margin-bottom: 10px;
+            font-weight: bold; /* Texto en negrita */
+            width: 100%;
+            box-sizing: border-box; /* Considerar el borde y el relleno en el ancho */
+        }
+
+        /* Estilos para el botón */
+        button[type="submit"] {
+            background-color: #FFD700; /* Fondo amarillo */
+            color: #000000; /* Texto negro */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Transición suave del color de fondo */
+            font-weight: bold; /* Texto en negrita */
+        }
+
+        button[type="submit"]:hover {
+            background-color: #FFFF00; /* Cambio de color de fondo al pasar el ratón */
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            text-align: center;
+            color: #FFFFFF; /* Color de texto blanco */
+            margin-top: 20px; /* Espaciado superior */
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image-container"></div> <!-- Contenedor de la imagen de fondo -->
+    <div class="container">
+        <section class="hero">
+            <h1 style="color: #00FF00;">Gamer</h1>
+            <h2 style="color: #800080;">Bienvenido a Gamer</h2>
+                <p style="color: #e6deee; font-weight: bold;">La red social de videojuegos donde puedes compartir tus experiencias, encontrar nuevos amigos y descubrir los últimos juegos.</p>
+                <a href="registro.html" class="btn" style="color: #00FF00;">Únete ahora</a>
+        </section>
+
+        <section class="inicio-sesion">
+            <h2>Iniciar Sesión</h2>
+            <form action="procesar_inicio_sesion.php" method="post">
+                <label for="usuario">Nombre de usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Gamer. Todos los derechos reservados a Hugo del Campo López.</p>
+        </footer>
+    </div>
+</body>
+</html>
+

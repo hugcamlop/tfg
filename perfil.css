@@ -1,0 +1,210 @@
+/* Reset básico y definiciones */
+:root {
+    --color-azul-claro: #E1F5FE; /* Azul claro suave */
+    --fondo-publicaciones: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    --color-texto-publicaciones: #0277BD; /* Azul oscuro para un buen contraste */
+    --color-fecha-publicaciones: #B0BEC5; /* Gris claro para las fechas */
+    --color-barra-navegacion: #01579b; /* Azul oscuro para la barra de navegación */
+    --color-barra-hover: #0277BD; /* Azul para hover en la barra de navegación */
+    --color-borde-publicacion: #0277BD; /* Azul oscuro para el borde de las publicaciones */
+    --color-fondo-hover: #B3E5FC; /* Azul claro para hover */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #0277BD; /* Color de texto general en azul oscuro */
+    background-color: var(--color-azul-claro); /* Fondo general azul claro */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: var(--color-barra-navegacion); /* Fondo azul oscuro para la barra de navegación */
+    color: #FFFFFF; /* Texto blanco */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #FFFFFF; /* Blanco para los enlaces */
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: var(--color-fondo-hover); /* Azul más claro al pasar el mouse */
+}
+
+/* Estilos generales del perfil */
+.perfil {
+    padding-top: 120px; /* Espacio para la barra de navegación */
+    padding: 20px;
+    margin: auto;
+    max-width: 800px; /* Ancho máximo para el contenedor del perfil */
+}
+
+/* Estilos para las publicaciones en el perfil */
+.publicaciones h3 {
+    color: #0277BD; /* Aplica el azul oscuro al título */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-shadow: 0 0 3px #B3E5FC; /* Sutil brillo azul al texto */
+}
+
+.publicacion {
+    background-color: var(--fondo-publicaciones);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border-left: 5px solid var(--color-borde-publicacion); /* Borde izquierdo en azul oscuro para destacar */
+}
+
+.publicacion p, .publicacion span {
+    margin-bottom: 10px; /* Espaciado entre elementos de la publicación */
+}
+
+.publicacion span {
+    font-size: 0.8em;
+    color: var(--color-fecha-publicaciones); /* Gris claro para las fechas */
+}
+
+/* Estilos del formulario de imagen de perfil */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 30px; /* Espacio extra encima del formulario */
+}
+
+form h3 {
+    color: #0277BD; /* Azul oscuro */
+    margin-bottom: 10px;
+}
+
+input[type="file"], select, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--color-barra-navegacion);
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: var(--color-barra-navegacion); /* Azul oscuro */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-barra-hover); /* Azul más claro al pasar el mouse */
+}
+
+/* Estilos adicionales para mejorar la interfaz */
+button {
+    background-color: var(--color-barra-navegacion);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--color-barra-hover);
+}
+
+/* Estilos para el contenedor de seguimiento */
+#follow-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px; /* Añadir espacio encima del contenedor */
+}
+
+#follow-btn, #unfollow-btn {
+    background-color: var(--color-barra-navegacion);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Espacio a la derecha del botón */
+}
+
+#follow-btn:hover, #unfollow-btn:hover {
+    background-color: var(--color-barra-hover);
+}
+
+#follow-status {
+    font-weight: bold;
+    color: var(--color-borde-publicacion);
+    margin-left: 10px; /* Espacio entre el botón y el texto de seguimiento */
+}
+
+/* Estilos para la biografía */
+.bio {
+    background-color: var(--fondo-publicaciones);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px; /* Espacio superior para separar de otros elementos */
+    color: var(--color-texto-publicaciones);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+}
+
+/* Estilos del formulario de biografía */
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--color-barra-navegacion);
+    margin-bottom: 15px;
+    resize: vertical; /* Permite solo el ajuste vertical del tamaño del textarea */
+}
+
+/* Estilos del formulario de juegos */
+.juegos-form {
+    background-color: var(--fondo-publicaciones);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid var(--color-borde-publicacion); /* Borde azul oscuro */
+    text-align: center;
+}
+
+.juegos-form select, .juegos-form input[type="text"] {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.juegos-form button {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+}

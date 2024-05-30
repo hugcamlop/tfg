@@ -1,0 +1,125 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #0277BD; /* Azul oscuro para el texto */
+    background-color: #E1F5FE; /* Azul claro suave */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 80px; /* Espacio para la barra de navegación */
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #01579b; /* Azul oscuro */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #FFFFFF; /* Blanco para los enlaces */
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #0277BD; /* Azul más claro al pasar el mouse */
+}
+
+/* Contenedor de juegos */
+.juegos-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px; /* Ancho máximo para la legibilidad */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    border-radius: 8px;
+    border: 1px solid #0277BD; /* Borde azul oscuro */
+}
+
+.juego h3 {
+    color: #0277BD; /* Azul oscuro */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.juego p {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #555; /* Gris oscuro para el texto */
+}
+
+/* Estilos para el formulario de búsqueda */
+.buscador-container {
+    margin-bottom: 20px;
+}
+
+.buscador-container h3 {
+    color: #0277BD;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.buscador-container label {
+    margin-right: 10px;
+}
+
+.buscador-container select,
+.buscador-container input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #0277BD;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #0277BD; /* Texto azul oscuro */
+}
+
+.buscador-container button {
+    background-color: #01579b; /* Azul oscuro */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.buscador-container button:hover {
+    background-color: #0277BD; /* Azul más claro al pasar el mouse */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 119, 189, 0.5); /* Sombra azul */
+}
+
+/* Estilos adicionales para mejorar la interfaz */
+button {
+    background-color: #01579b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0277BD;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+}

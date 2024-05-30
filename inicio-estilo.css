@@ -1,0 +1,67 @@
+/* Resetear márgenes y rellenos */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    /* Fondo amarillo */
+    background-color: #FFD700;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra */
+    background-image: url('gamer.jpg'); /* Ruta de la imagen principal */
+    background-size: 50%; /* Ajusta el tamaño de la imagen al 50% del contenedor */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-position: center; /* Centra la imagen */
+}
+
+/* Estilos para los títulos */
+h1, h2, h3 {
+    color: #FFFFFF; /* Color de texto blanco */
+}
+
+/* Estilos para los párrafos */
+p {
+    color: #FFFFFF; /* Color de texto blanco */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #FFFFFF; /* Color de texto blanco */
+    text-decoration: none; /* Quitar subrayado */
+    transition: color 0.3s; /* Transición suave del color */
+}
+
+a:hover {
+    color: #FFD700; /* Cambio de color al pasar el ratón */
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.inicio-sesion {
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para el botón */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Fondo amarillo */
+    color: #000000; /* Texto negro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.btn:hover {
+    background-color: #FFFF00; /* Cambio de color de fondo al pasar el ratón */
+}
